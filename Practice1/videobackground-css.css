@@ -1,0 +1,49 @@
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+div {
+left: 0;
+line-height: 200px;
+margin-top: -100px;
+position: absolute;
+text-align: center;
+top: 50%;
+width: 100%;
+border: 5px solid black;
+color: white;
+}
+/*Media Queries, the webpage discovers certain parameters of the
+device/screen being used to view the webpage.*/
+
+/*To increase responsiveness on screen sizes are too wide*/
+/*Resizes screen width to 100% and scaling height, 
+uses the 16/9 min apsect ratio*/
+@media (min-aspect-ratio: 16/9) {
+    #testvideo  {
+        width: 100%;
+        height: auto;
+    }
+}
+/*To increase responsiveness on screen sizes that are either too small
+or below the 16/9 min aspect ratio*/
+@media  (max-aspect-ratio: 16/9)   {
+    #testvideo  {
+        width:auto;
+        height: 100%;
+    }
+}
+/*To increase responsivenss when the webpage is being viewed on phones
+and other mobile devices. The background video will not play.*/
+@media  (max-width: 767px)  {
+    #testvideo {
+        display: none;
+
+    }
+    body {
+        background: url('testimage.PNG');
+        background-size: cover;
+    }
+}
